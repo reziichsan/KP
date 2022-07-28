@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Tugas 3</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <span class="d-block p-2 bg-primary text-white"><h1>Tugas 3</h1></span>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Messages</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in mymembers %}
+                <tr>
+                    <td>{{ x.firstname }}</td>
+                    <td>{{ x.messages }}</td>
+                    <td><a href="update/{{ x.id }}" class="btn btn-primary">Edit</a>
+                    <td><a href="delete/{{ x.id }}" class="btn btn-danger">Delete</a>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p>
+            <a href="add/" class="btn btn-success mt-5" role="button">New Messages</a>
+        </p>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
